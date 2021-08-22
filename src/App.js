@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <br />
         <Header />
         <Switch>
           <Route path="/" exact component={ProductListing} />
