@@ -8,7 +8,7 @@ const initialState = {
   }]
 }
 // -------- 3 REDUCERS ----------
-export const productReducer = (state, { type, payload }) => {
+export const productReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case actionTypes.SET_PRODUCTS:
       return state;
