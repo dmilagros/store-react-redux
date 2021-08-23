@@ -11,6 +11,14 @@ export const fetchProducts = () => async (dispatch) => {
   });
 }
 
+export const fetchProduct = (id) => async (dispatch) => {
+  const response = await fakeStoreApi.get(`/products/${id}`);
+  dispatch({
+    type: actionTypes.SELECTED_PRODUCT,
+    payload: response.data
+  });
+}
+
 export const setProducts = (products) => {
   // -------- 2 ACTIONS ----------
   return {
